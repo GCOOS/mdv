@@ -25,7 +25,7 @@
 
     <!-- Optional layers -->
     <OptionalLayers BBOX="-98,18,-79,30.9"
-        format="image/png"  server="http://localhost:8080/ncWMS/wms"
+        format="image/png"  server="http://159.203.107.216:8080/ncWMS/wms"
         ncWMS="true" max_time_range="month">
         <layer Menu="ncwms,gomexWSE"
             EN="Surface Elevation"
@@ -34,7 +34,7 @@
 
     <!--ncWMS Layers -->
     <MainLayers BBOX="-98,18,-79,30.9"
-        format="image/png"  server="http://localhost:8080/ncWMS/wms"
+        format="image/png"  server="http://159.203.107.216:8080/ncWMS/wms"
         ncWMS="true" max_time_range="month">
 
         <layer Menu="ncwms,gomexSWV"
