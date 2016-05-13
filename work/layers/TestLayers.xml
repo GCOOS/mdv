@@ -13,6 +13,7 @@
      <Menu ID="gomexNWV" EN="North Water Velocity" />
      <Menu ID="gomexEWV" EN="East Water Velocity" />
      <Menu ID="umsCODAR" EN="6km CODAR" />
+     <Menu ID="ncom" EN="NCOM Velocity" />
      <Menu ID="ncwms" EN="GOMEX-PPP Layers" ES="Capas ncWMS" HI_IN="ncWMS परते"/>
      <Menu ID="statesdyn" EN="Dynamic US states" ES="Estados (dinamicos)" HI_IN="अमेरिकन राज्यों"/>
      <Menu ID="lev1" EN="Level 1" ES="Nivel 1" HI_IN="स्तर १"/>
@@ -36,6 +37,14 @@
            name="surface_sea_water_velocity"
            defParticleSpeed=".9"
            overlaystreamlines="surface_sea_water_velocity" />
+
+<layer Menu="ncom"
+            format="image/png"  server="http://ecowatch.ncddc.noaa.gov/thredds/wms/ncom_amseas_agg/AmSeas_Apr_05_2013_to_Current_best.ncd"
+           EN="NCOM Velocity"
+           style="vector"
+           name="sea_water_velocity"
+           defParticleSpeed=".9"
+           overlaystreamlines="surface_sea_water_velocity" />
     </OptionalLayers>
 
     <!--ncWMS Layers -->
@@ -56,14 +65,12 @@
         <layer Menu="gomexSAL"
             EN="Salinity"
             name="GOMEX-PPP/salinity" />
-
-        <layer Menu="gomexNWV"
-            EN="Northward Water Velocity"
-            name="GOMEX-PPP/water_u" />
-
-        <layer Menu="gomexEWV"
-            EN="Eastward Water Velocity"
-            name="GOMEX-PPP/water_v" />
+        
+        <layer Menu="ncom"
+            format="image/png"  server="http://ecowatch.ncddc.noaa.gov/thredds/wms/ncom_amseas_agg/AmSeas_Apr_05_2013_to_Current_best.ncd"
+           EN="NCOM Velocity"
+           style="vector"
+           name="sea_water_velocity" />
     </MainLayers>
     <!-- Vector layer -->
     <!-- Vector CQL layer -->
