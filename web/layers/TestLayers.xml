@@ -1,63 +1,66 @@
 <MenuConf xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="schema.xsd">
-    <!-- This are the menus that are available to display entries -->
-    <Menus>
-     <Menu ID="veccqltest" EN="Vector CQL demo" ES="Ejemplo CQL" HI_IN="वेक्टर CQL"/>
-     <Menu ID="ncwmsMultDateOneZ" EN="ncWMS OneZ MultDate" ES="ESP ncWMS OneZ MultDate"/>
-     <Menu ID="ncwmsMultDateMultDepthCurr" EN="GoM Temperature With Currents " ES="Golfo con corrientes"/>
-     <Menu ID="worldTempCurrents" EN="World Temperature w Currents " ES="Temperatura y corrientes"/>
-     <Menu ID="worldTempCurrentsLocal" EN="Localhost World Temperature w Currents " ES="Temperatura y corrientes"/>
-     <Menu ID="gomexSWV" EN="Seawater Velocity Streamlines" />
-     <Menu ID="gomexWTMP" EN="Water Temperature" />
-     <Menu ID="gomexSAL" EN="Salinity" />
-     <Menu ID="gomexWSE" EN="Water Surface Elevation" />
-     <Menu ID="gomexNWV" EN="North Water Velocity" />
-     <Menu ID="gomexEWV" EN="East Water Velocity" />
-     <Menu ID="6kmCODAR" EN="6km CODAR" />
-     <Menu ID="ncom" EN="NCOM Velocity" />
-     <Menu ID="ncwms" EN="GOMEX-PPP Layers" ES="Capas ncWMS" HI_IN="ncWMS परते"/>
-     <Menu ID="statesdyn" EN="Dynamic US states" ES="Estados (dinamicos)" HI_IN="अमेरिकन राज्यों"/>
-     <Menu ID="lev1" EN="Level 1" ES="Nivel 1" HI_IN="स्तर १"/>
-     <Menu ID="states" EN="US states" ES="Estados" HI_IN="अमेरिकन राज्यों"/>
-    </Menus>
+  <Menus>
+    <Menu ID="observations" EN="Observations" />
+    <Menu ID="models" EN="Models" />
+    <Menu ID="gomexSWV" EN="Seawater Velocity Streamlines" />
+    <Menu ID="gomexWTMP" EN="Water Temperature" />
+    <Menu ID="gomexSAL" EN="Salinity" />
+    <Menu ID="gomexWSE" EN="Water Surface Elevation" />
+    <Menu ID="gomexNWV" EN="North Water Velocity" />
+    <Menu ID="gomexEWV" EN="East Water Velocity" />
+    <Menu ID="6kmCODAR" EN="6km CODAR" />
+    <Menu ID="testing" EN="Test Layer" />
+    <Menu ID="ncom" EN="NCOM Velocity" />
+    <Menu ID="ncwms" EN="GOMEX-PPP Layers" />
+  </Menus>
 
-    <BackgroundLayers BBOX="-180,-90,180,90" server="http://ncwms.coaps.fsu.edu/geoserver/wms">
-        <layer name="comm:pyrResult512" featureInfo="comm:gebco"/> 
-    </BackgroundLayers>
+  <BackgroundLayers BBOX="-180,-90,180,90" server="http://ncwms.coaps.fsu.edu/geoserver/wms">
+    <layer name="comm:pyrResult512" featureInfo="comm:gebco"/>
+  </BackgroundLayers>
 
 
-    <!-- Optional layers -->
-    <OptionalLayers BBOX="-98,18,-79,30.9"
-        format="image/png"  server="http://159.203.107.216:8080/ncWMS/wms"
-        ncWMS="true" max_time_range="day" style="vector">
+  <!-- Optional layers -->
+  <OptionalLayers BBOX="-98,18,-79,30.9"
+    format="image/png"  server="http://159.203.107.216:8080/ncWMS/wms"
+    ncWMS="true" style="vector">
 
-    <layer Menu="ncom"
-    	format="image/png"  
-	server="http://ecowatch.ncddc.noaa.gov/thredds/wms/ncom_amseas_agg/AmSeas_Apr_05_2013_to_Current_best.ncd"
-        EN="NCOM Velocity"
-        style="vector"
-        name="sea_water_velocity"
-        defParticleSpeed=".9"
-        overlaystreamlines="surface_sea_water_velocity" />
-    </OptionalLayers>
+    <layer Menu="models,ncom"
+      format="image/png"
+      server="http://ecowatch.ncddc.noaa.gov/thredds/wms/ncom_amseas_agg/AmSeas_Apr_05_2013_to_Current_best.ncd"
+      EN="NCOM Velocity"
+      style="vector"
+      name="sea_water_velocity"
+      defParticleSpeed=".9"
+      overlaystreamlines="surface_sea_water_velocity" />
 
-    <!--ncWMS Layers -->
-    <MainLayers BBOX="-98,18,-79,30.9"
-        format="image/png"  server="http://159.203.107.216:8080/ncWMS/wms"
-        ncWMS="true" max_time_range="month">
+    <layer Menu="observations,6kmCODAR"
+      format="image/png"  server="http://hfrnet.ucsd.edu/thredds/wms/HFR/USEGC/6km/hourly/RTV/HFRADAR,_US_East_and_Gulf_Coast,_6km_Resolution,_Hourly_RTV_best.ncd"
+      EN="6km CODAR"
+      max_time_range="month"
+      style="vector"
+      name="surface_sea_water_velocity"/>
+  </OptionalLayers>
 
-  <layer Menu="6kmCODAR"
-            format="image/png"  server="http://hfrnet.ucsd.edu/thredds/wms/HFR/USEGC/6km/hourly/RTV/HFRADAR,_US_East_and_Gulf_Coast,_6km_Resolution,_Hourly_RTV_best.ncd"
-           EN="6km CODAR"
-           style="vector"
-           name="surface_sea_water_velocity" />
+  <!--Main Layers -->
+  <MainLayers BBOX="-98,18,-79,30.9"
+    format="image/png"  server="http://159.203.107.216:8080/ncWMS/wms"
+    ncWMS="true" max_time_range="month">
 
-        <layer Menu="ncom"
-            format="image/png"  server="http://ecowatch.ncddc.noaa.gov/thredds/wms/ncom_amseas_agg/AmSeas_Apr_05_2013_to_Current_best.ncd"
-           EN="NCOM Velocity"
-           style="vector"
-           name="sea_water_velocity" />
-    </MainLayers>
-    <!-- Vector layer -->
-    <!-- Vector CQL layer -->
-    <!-- GeotiffLayer -->
+    <layer Menu="observations,6kmCODAR"
+      format="image/png"  server="http://hfrnet.ucsd.edu/thredds/wms/HFR/USEGC/6km/hourly/RTV/HFRADAR,_US_East_and_Gulf_Coast,_6km_Resolution,_Hourly_RTV_best.ncd"
+      EN="6km CODAR"
+      style="vector"
+      name="surface_sea_water_velocity" />
+  
+    <layer Menu="models,ncom"
+      format="image/png"  server="http://ecowatch.ncddc.noaa.gov/thredds/wms/ncom_amseas_agg/AmSeas_Apr_05_2013_to_Current_best.ncd"
+      EN="NCOM Velocity"
+      style="vector"
+      name="sea_water_velocity" />
+  
+    <layer Menu="models,testing"
+      format="image/png"  server="http://omgsrv1.meas.ncsu.edu:8080/thredds/wms/fmrc/sabgom/SABGOM_Forecast_Model_Run_Collection_best.ncd"
+      EN="SABGOM NO3"
+      name="NO3" />
+  </MainLayers>
 </MenuConf>
