@@ -13,6 +13,7 @@
     <Menu ID="6kmCODAR" EN="6km CODAR" />
     <Menu ID="nrl_std" EN="NRL STD" />
     <Menu ID="nrl_mean" EN="NRL MEAN" />
+    <Menu ID="nrl_std" EN="NRL STD" />
     <Menu ID="nrl_water_temp" EN="Water Temperature" />
     <Menu ID="nrl_water_u" EN="Water U" />
     <Menu ID="nrl_water_v" EN="Water V" />
@@ -31,19 +32,68 @@
   <!-- Optional Layers Begin -->
   <OptionalLayers BBOX="-98,18,-79,30.9"
     format="image/png"  server="http://159.203.107.216:8080/ncWMS/wms"
-    ncWMS="true" style="vector">
+    ncWMS="true">
     <!-- Models Begin -->
+    <!-- NRL MEAN Begin -->
+    <layer Menu="models,nrl_mean,nrl_water_temp"
+      format="image/png"
+      server="http://gcoos4.tamu.edu:8080/thredds/wms/nrl_mean/out/2016_MEAN_best.ncd"
+      EN="NRL Mean Water Temp"
+      name="water_temp" />
+
+    <layer Menu="models,nrl_mean,nrl_water_u"
+      format="image/png"
+      server="http://gcoos4.tamu.edu:8080/thredds/wms/nrl_mean/out/2016_MEAN_best.ncd"
+      EN="NRL Mean Water U"
+      name="water_u" />
+
+    <layer Menu="models,nrl_mean,nrl_water_v"
+      format="image/png"
+      server="http://gcoos4.tamu.edu:8080/thredds/wms/nrl_mean/out/2016_MEAN_best.ncd"
+      EN="NRL Mean Water V"
+      name="water_v" />
+
+   <layer Menu="models,nrl_mean,nrl_surf_el_detlcl"
+      format="image/png"
+      server="http://gcoos4.tamu.edu:8080/thredds/wms/nrl_mean/out/2016_MEAN_best.ncd"
+      EN="NRL Mean Surface Elevation"
+      name="surf_el_detlcl" />
+   <!-- NRL MEAN END -->
+
+   <!-- NRL STD BEGIN -->
+   <layer Menu="models,nrl_std,nrl_water_temp"
+      format="image/png"
+      server="http://gcoos4.tamu.edu:8080/thredds/wms/nrl_std/out/2016_STD_best.ncd"
+      EN="NRL STD Water Temp"
+      name="water_temp" />
+
+    <layer Menu="models,nrl_std,nrl_water_u"
+      format="image/png"
+      server="http://gcoos4.tamu.edu:8080/thredds/wms/nrl_std/out/2016_STD_best.ncd"
+      EN="NRL STD Water U"
+      name="water_u" />
+
+    <layer Menu="models,nrl_std,nrl_water_v"
+      format="image/png"
+      server="http://gcoos4.tamu.edu:8080/thredds/wms/nrl_std/out/2016_STD_best.ncd"
+      EN="NRL STD Water V"
+      name="water_v" />
+
+    <layer Menu="models,nrl_std,nrl_surf_el_detlcl"
+      format="image/png"
+      server="http://gcoos4.tamu.edu:8080/thredds/wms/nrl_std/out/2016_STD_best.ncd"
+      EN="NRL STD Surface Elevation"
+      name="surf_el_detlcl" />
+    <!-- NRL STD END -->
+
+    <!-- NCOM BEGIN -->
     <layer Menu="models,ncom"
       format="image/png"
       server="http://ecowatch.ncddc.noaa.gov/thredds/wms/ncom_amseas_agg/AmSeas_Apr_05_2013_to_Current_best.ncd"
+      EN="NCOM Velocity"
       style="vector"
-      name="sea_water_velocity"
-      defParticleSpeed=".9"
-      overlaystreamlines="surface_sea_water_velocity" />
-
-    <layer Menu="models,nrl_std"
-      format="image/png"  server="http://omgsrv1.meas.ncsu.edu:8080/thredds/wms/fmrc/sabgom/SABGOM_Forecast_Model_Run_Collection_best.ncd"
-      name="NO3" />
+      name="sea_water_velocity" />
+    <!-- NCOM END -->
     <!-- Models End -->
 
     <!-- Observations Begin -->
@@ -97,6 +147,32 @@
       EN="NRL Mean Surface Elevation"
       name="surf_el_detlcl" />
    <!-- NRL MEAN END -->
+
+   <!-- NRL STD BEGIN -->
+   <layer Menu="models,nrl_std,nrl_water_temp"
+      format="image/png"
+      server="http://gcoos4.tamu.edu:8080/thredds/wms/nrl_std/out/2016_STD_best.ncd"
+      EN="NRL STD Water Temp"
+      name="water_temp" />
+
+    <layer Menu="models,nrl_std,nrl_water_u"
+      format="image/png"
+      server="http://gcoos4.tamu.edu:8080/thredds/wms/nrl_std/out/2016_STD_best.ncd"
+      EN="NRL STD Water U"
+      name="water_u" />
+
+    <layer Menu="models,nrl_std,nrl_water_v"
+      format="image/png"
+      server="http://gcoos4.tamu.edu:8080/thredds/wms/nrl_std/out/2016_STD_best.ncd"
+      EN="NRL STD Water V"
+      name="water_v" />
+
+   <layer Menu="models,nrl_std,nrl_surf_el_detlcl"
+      format="image/png"
+      server="http://gcoos4.tamu.edu:8080/thredds/wms/nrl_std/out/2016_STD_best.ncd"
+      EN="NRL STD Surface Elevation"
+      name="surf_el_detlcl" />
+   <!-- NRL STD END -->
 
    <!-- NCOM BEGIN -->
    <layer Menu="models,ncom"
