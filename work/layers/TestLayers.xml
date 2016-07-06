@@ -3,6 +3,7 @@
   <Menus>
     <Menu ID="observations" EN="Observations" />
     <Menu ID="models" EN="Models" />
+    <Menu ID="testing" EN="Testing" />
     <Menu ID="gomex-ppp" EN="GOMEX-PPP" />
     <Menu ID="gomexSWV" EN="Seawater Velocity Streamlines" />
     <Menu ID="gomexWTMP" EN="Water Temperature" />
@@ -36,54 +37,54 @@
     <!-- Models Begin -->
     <!-- NRL MEAN Begin -->
     <layer Menu="models,nrl_mean,nrl_water_temp"
+      server="http://localhost:8080/ncWMS/wms"
       format="image/png"
-      server="http://gcoos4.tamu.edu:8080/thredds/wms/nrl_mean/out/2016_MEAN_best.ncd"
       EN="NRL Mean Water Temp"
-      name="water_temp" />
+      name="NRL_MEAN/water_temp" />
 
     <layer Menu="models,nrl_mean,nrl_water_u"
       format="image/png"
-      server="http://gcoos4.tamu.edu:8080/thredds/wms/nrl_mean/out/2016_MEAN_best.ncd"
+      server="http://localhost:8080/ncWMS/wms"
       EN="NRL Mean Water U"
-      name="water_u" />
+      name="NRL_MEAN/water_u" />
 
     <layer Menu="models,nrl_mean,nrl_water_v"
       format="image/png"
-      server="http://gcoos4.tamu.edu:8080/thredds/wms/nrl_mean/out/2016_MEAN_best.ncd"
+      server="http://localhost:8080/ncWMS/wms"
       EN="NRL Mean Water V"
-      name="water_v" />
+      name="NRL_MEAN/water_v" />
 
    <layer Menu="models,nrl_mean,nrl_surf_el_detlcl"
       format="image/png"
-      server="http://gcoos4.tamu.edu:8080/thredds/wms/nrl_mean/out/2016_MEAN_best.ncd"
+      server="http://localhost:8080/ncWMS/wms"
       EN="NRL Mean Surface Elevation"
-      name="surf_el_detlcl" />
+      name="NRL_MEAN/surf_el_detlcl" />
    <!-- NRL MEAN END -->
 
    <!-- NRL STD BEGIN -->
    <layer Menu="models,nrl_std,nrl_water_temp"
       format="image/png"
-      server="http://gcoos4.tamu.edu:8080/thredds/wms/nrl_std/out/2016_STD_best.ncd"
+      server="http://localhost:8080/ncWMS/wms"
       EN="NRL STD Water Temp"
-      name="water_temp" />
+      name="NRL_STD/water_temp" />
 
     <layer Menu="models,nrl_std,nrl_water_u"
       format="image/png"
-      server="http://gcoos4.tamu.edu:8080/thredds/wms/nrl_std/out/2016_STD_best.ncd"
+      server="http://localhost:8080/ncWMS/wms"
       EN="NRL STD Water U"
-      name="water_u" />
+      name="NRL_STD/water_u" />
 
     <layer Menu="models,nrl_std,nrl_water_v"
       format="image/png"
-      server="http://gcoos4.tamu.edu:8080/thredds/wms/nrl_std/out/2016_STD_best.ncd"
+      server="http://localhost:8080/ncWMS/wms"
       EN="NRL STD Water V"
-      name="water_v" />
+      name="NRL_STD/water_v" />
 
     <layer Menu="models,nrl_std,nrl_surf_el_detlcl"
       format="image/png"
-      server="http://gcoos4.tamu.edu:8080/thredds/wms/nrl_std/out/2016_STD_best.ncd"
+      server="http://localhost:8080/ncWMS/wms"
       EN="NRL STD Surface Elevation"
-      name="surf_el_detlcl" />
+      name="NRL_STD/surf_el_detlcl" />
     <!-- NRL STD END -->
 
     <!-- NCOM BEGIN -->
@@ -124,54 +125,54 @@
     <!-- Models Begin -->
     <!-- NRL MEAN Begin -->
     <layer Menu="models,nrl_mean,nrl_water_temp"
+      server="http://localhost:8080/ncWMS/wms"
       format="image/png"
-      server="http://gcoos4.tamu.edu:8080/thredds/wms/nrl_mean/out/2016_MEAN_best.ncd"
       EN="NRL Mean Water Temp"
-      name="water_temp" />
+      name="NRL_MEAN/water_temp" />
 
     <layer Menu="models,nrl_mean,nrl_water_u"
       format="image/png"
-      server="http://gcoos4.tamu.edu:8080/thredds/wms/nrl_mean/out/2016_MEAN_best.ncd"
+      server="http://localhost:8080/ncWMS/wms"
       EN="NRL Mean Water U"
-      name="water_u" />
+      name="NRL_MEAN/water_u" />
 
     <layer Menu="models,nrl_mean,nrl_water_v"
       format="image/png"
-      server="http://gcoos4.tamu.edu:8080/thredds/wms/nrl_mean/out/2016_MEAN_best.ncd"
+      server="http://localhost:8080/ncWMS/wms"
       EN="NRL Mean Water V"
-      name="water_v" />
+      name="NRL_MEAN/water_v" />
 
    <layer Menu="models,nrl_mean,nrl_surf_el_detlcl"
       format="image/png"
-      server="http://gcoos4.tamu.edu:8080/thredds/wms/nrl_mean/out/2016_MEAN_best.ncd"
+      server="http://localhost:8080/ncWMS/wms"
       EN="NRL Mean Surface Elevation"
-      name="surf_el_detlcl" />
+      name="NRL_MEAN/surf_el_detlcl" />
    <!-- NRL MEAN END -->
 
    <!-- NRL STD BEGIN -->
    <layer Menu="models,nrl_std,nrl_water_temp"
       format="image/png"
-      server="http://gcoos4.tamu.edu:8080/thredds/wms/nrl_std/out/2016_STD_best.ncd"
+      server="http://localhost:8080/ncWMS/wms"
       EN="NRL STD Water Temp"
-      name="water_temp" />
+      name="NRL_STD/water_temp" />
 
     <layer Menu="models,nrl_std,nrl_water_u"
       format="image/png"
-      server="http://gcoos4.tamu.edu:8080/thredds/wms/nrl_std/out/2016_STD_best.ncd"
+      server="http://localhost:8080/ncWMS/wms"
       EN="NRL STD Water U"
-      name="water_u" />
+      name="NRL_STD/water_u" />
 
     <layer Menu="models,nrl_std,nrl_water_v"
       format="image/png"
-      server="http://gcoos4.tamu.edu:8080/thredds/wms/nrl_std/out/2016_STD_best.ncd"
+      server="http://localhost:8080/ncWMS/wms"
       EN="NRL STD Water V"
-      name="water_v" />
+      name="NRL_STD/water_v" />
 
    <layer Menu="models,nrl_std,nrl_surf_el_detlcl"
       format="image/png"
-      server="http://gcoos4.tamu.edu:8080/thredds/wms/nrl_std/out/2016_STD_best.ncd"
+      server="http://localhost:8080/ncWMS/wms"
       EN="NRL STD Surface Elevation"
-      name="surf_el_detlcl" />
+      name="NRL_STD/surf_el_detlcl" />
    <!-- NRL STD END -->
 
    <!-- NCOM BEGIN -->
@@ -182,9 +183,7 @@
       style="vector"
       name="sea_water_velocity" />
    <!-- NCOM END -->
-
-    <!-- Models End -->
-
+   <!-- Models End -->
   </MainLayers>
   <!-- MainLayers End -->
 </MenuConf>
