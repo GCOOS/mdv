@@ -8,16 +8,16 @@
 <div id="leftFooter" class="leftFoot">
 	&nbsp;
 	<a  href="#">
-		<img border="0" src="./common/images/Logos/gcoos_logo.png" alt="Logo" width="30" height="30" /></a>
+		<img border="0" src="./common/images/Logos/gcoos_logo.gif" alt="Logo" width="80" height="40" /></a>
 	&nbsp;
 	<a  href="#">
-		<img border="0" src="./common/images/Logos/nrl_logo.png" alt="Logo" width="30" height="30" /></a>
+		<img border="0" src="./common/images/Logos/nrl_logo.png" alt="Logo" width="50" height="50" /></a>
 	&nbsp 
 	<a  href="#">
-		<img border="0" src="./common/images/Logos/noaa_logo.png" alt="Logo" width="30" height="30" /></a>
+		<img border="0" src="./common/images/Logos/noaa_logo.png" alt="Logo" width="50" height="50" /></a>
 	&nbsp 
 	<a  href="#">
-		<img border="0" src="./common/images/Logos/owgis.png" alt="Logo" width="30" height="30" /></a>
+		<img border="0" src="./common/images/Logos/owgis.png" alt="Logo" width="50" height="50" /></a>
 			
 	<a  href="#">
 		<p class="footNote" align="left">

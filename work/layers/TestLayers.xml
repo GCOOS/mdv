@@ -37,26 +37,26 @@
     <!-- Models Begin -->
     <!-- NRL MEAN Begin -->
     <layer Menu="models,nrl_mean,nrl_water_temp"
-      server="http://localhost:8080/ncWMS/wms"
+      server="http://159.203.107.216:8080/ncWMS/wms"
       format="image/png"
       EN="NRL Mean Water Temp"
       name="NRL_MEAN/water_temp" />
 
     <layer Menu="models,nrl_mean,nrl_water_u"
       format="image/png"
-      server="http://localhost:8080/ncWMS/wms"
+      server="http://159.203.107.216:8080/ncWMS/wms"
       EN="NRL Mean Water U"
       name="NRL_MEAN/water_u" />
 
     <layer Menu="models,nrl_mean,nrl_water_v"
       format="image/png"
-      server="http://localhost:8080/ncWMS/wms"
+      server="http://159.203.107.216:8080/ncWMS/wms"
       EN="NRL Mean Water V"
       name="NRL_MEAN/water_v" />
 
    <layer Menu="models,nrl_mean,nrl_surf_el_detlcl"
       format="image/png"
-      server="http://localhost:8080/ncWMS/wms"
+      server="http://159.203.107.216:8080/ncWMS/wms"
       EN="NRL Mean Surface Elevation"
       name="NRL_MEAN/surf_el_detlcl" />
    <!-- NRL MEAN END -->
@@ -64,25 +64,25 @@
    <!-- NRL STD BEGIN -->
    <layer Menu="models,nrl_std,nrl_water_temp"
       format="image/png"
-      server="http://localhost:8080/ncWMS/wms"
+      server="http://159.203.107.216:8080/ncWMS/wms"
       EN="NRL STD Water Temp"
       name="NRL_STD/water_temp" />
 
     <layer Menu="models,nrl_std,nrl_water_u"
       format="image/png"
-      server="http://localhost:8080/ncWMS/wms"
+      server="http://159.203.107.216:8080/ncWMS/wms"
       EN="NRL STD Water U"
       name="NRL_STD/water_u" />
 
     <layer Menu="models,nrl_std,nrl_water_v"
       format="image/png"
-      server="http://localhost:8080/ncWMS/wms"
+      server="http://159.203.107.216:8080/ncWMS/wms"
       EN="NRL STD Water V"
       name="NRL_STD/water_v" />
 
     <layer Menu="models,nrl_std,nrl_surf_el_detlcl"
       format="image/png"
-      server="http://localhost:8080/ncWMS/wms"
+      server="http://159.203.107.216:8080/ncWMS/wms"
       EN="NRL STD Surface Elevation"
       name="NRL_STD/surf_el_detlcl" />
     <!-- NRL STD END -->
@@ -125,26 +125,26 @@
     <!-- Models Begin -->
     <!-- NRL MEAN Begin -->
     <layer Menu="models,nrl_mean,nrl_water_temp"
-      server="http://localhost:8080/ncWMS/wms"
+      server="http://159.203.107.216:8080/ncWMS/wms"
       format="image/png"
       EN="NRL Mean Water Temp"
       name="NRL_MEAN/water_temp" />
 
     <layer Menu="models,nrl_mean,nrl_water_u"
       format="image/png"
-      server="http://localhost:8080/ncWMS/wms"
+      server="http://159.203.107.216:8080/ncWMS/wms"
       EN="NRL Mean Water U"
       name="NRL_MEAN/water_u" />
 
     <layer Menu="models,nrl_mean,nrl_water_v"
       format="image/png"
-      server="http://localhost:8080/ncWMS/wms"
+      server="http://159.203.107.216:8080/ncWMS/wms"
       EN="NRL Mean Water V"
       name="NRL_MEAN/water_v" />
 
    <layer Menu="models,nrl_mean,nrl_surf_el_detlcl"
       format="image/png"
-      server="http://localhost:8080/ncWMS/wms"
+      server="http://159.203.107.216:8080/ncWMS/wms"
       EN="NRL Mean Surface Elevation"
       name="NRL_MEAN/surf_el_detlcl" />
    <!-- NRL MEAN END -->
@@ -152,25 +152,25 @@
    <!-- NRL STD BEGIN -->
    <layer Menu="models,nrl_std,nrl_water_temp"
       format="image/png"
-      server="http://localhost:8080/ncWMS/wms"
+      server="http://159.203.107.216:8080/ncWMS/wms"
       EN="NRL STD Water Temp"
       name="NRL_STD/water_temp" />
 
     <layer Menu="models,nrl_std,nrl_water_u"
       format="image/png"
-      server="http://localhost:8080/ncWMS/wms"
+      server="http://159.203.107.216:8080/ncWMS/wms"
       EN="NRL STD Water U"
       name="NRL_STD/water_u" />
 
     <layer Menu="models,nrl_std,nrl_water_v"
       format="image/png"
-      server="http://localhost:8080/ncWMS/wms"
+      server="http://159.203.107.216:8080/ncWMS/wms"
       EN="NRL STD Water V"
       name="NRL_STD/water_v" />
 
    <layer Menu="models,nrl_std,nrl_surf_el_detlcl"
       format="image/png"
-      server="http://localhost:8080/ncWMS/wms"
+      server="http://159.203.107.216:8080/ncWMS/wms"
       EN="NRL STD Surface Elevation"
       name="NRL_STD/surf_el_detlcl" />
    <!-- NRL STD END -->
