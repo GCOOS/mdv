@@ -17,7 +17,7 @@
     <Menu ID="nrl_std" EN="NRL STD" />
     <Menu ID="nrl_water_temp" EN="Water Temperature" />
     <Menu ID="nrl_water_u" EN="Water U" />
-    <Menu ID="nrl_water_v" EN="Water V" />
+    <Menu ID="nrl_water_v" EN="Sea Water Velocity" />
     <Menu ID="nrl_surf_el_detlcl" EN="Surface Elevation" />
     <Menu ID="ncom" EN="NCOM velocity" />
   </Menus>
@@ -35,58 +35,6 @@
     format="image/png"  server="http://159.203.107.216:8080/ncWMS/wms"
     ncWMS="true">
     <!-- Models Begin -->
-    <!-- NRL MEAN Begin -->
-    <layer Menu="models,nrl_mean,nrl_water_temp"
-      server="http://159.203.107.216:8080/ncWMS/wms"
-      format="image/png"
-      EN="NRL Mean Water Temp"
-      name="NRL_MEAN/water_temp" />
-
-    <layer Menu="models,nrl_mean,nrl_water_u"
-      format="image/png"
-      server="http://159.203.107.216:8080/ncWMS/wms"
-      EN="NRL Mean Water U"
-      name="NRL_MEAN/water_u" />
-
-    <layer Menu="models,nrl_mean,nrl_water_v"
-      format="image/png"
-      server="http://159.203.107.216:8080/ncWMS/wms"
-      EN="NRL Mean Water V"
-      name="NRL_MEAN/water_v" />
-
-   <layer Menu="models,nrl_mean,nrl_surf_el_detlcl"
-      format="image/png"
-      server="http://159.203.107.216:8080/ncWMS/wms"
-      EN="NRL Mean Surface Elevation"
-      name="NRL_MEAN/surf_el_detlcl" />
-   <!-- NRL MEAN END -->
-
-   <!-- NRL STD BEGIN -->
-   <layer Menu="models,nrl_std,nrl_water_temp"
-      format="image/png"
-      server="http://159.203.107.216:8080/ncWMS/wms"
-      EN="NRL STD Water Temp"
-      name="NRL_STD/water_temp" />
-
-    <layer Menu="models,nrl_std,nrl_water_u"
-      format="image/png"
-      server="http://159.203.107.216:8080/ncWMS/wms"
-      EN="NRL STD Water U"
-      name="NRL_STD/water_u" />
-
-    <layer Menu="models,nrl_std,nrl_water_v"
-      format="image/png"
-      server="http://159.203.107.216:8080/ncWMS/wms"
-      EN="NRL STD Water V"
-      name="NRL_STD/water_v" />
-
-    <layer Menu="models,nrl_std,nrl_surf_el_detlcl"
-      format="image/png"
-      server="http://159.203.107.216:8080/ncWMS/wms"
-      EN="NRL STD Surface Elevation"
-      name="NRL_STD/surf_el_detlcl" />
-    <!-- NRL STD END -->
-
     <!-- NCOM BEGIN -->
     <layer Menu="models,ncom"
       format="image/png"
@@ -130,17 +78,12 @@
       EN="NRL Mean Water Temp"
       name="NRL_MEAN/water_temp" />
 
-    <layer Menu="models,nrl_mean,nrl_water_u"
-      format="image/png"
-      server="http://159.203.107.216:8080/ncWMS/wms"
-      EN="NRL Mean Water U"
-      name="NRL_MEAN/water_u" />
-
     <layer Menu="models,nrl_mean,nrl_water_v"
-      format="image/png"
       server="http://159.203.107.216:8080/ncWMS/wms"
-      EN="NRL Mean Water V"
-      name="NRL_MEAN/water_v" />
+      format="image/png"
+      style="vector"
+      EN="NRL Mean Sea Water Velocity"
+      name="NRL_MEAN/sea_water_velocity" />
 
    <layer Menu="models,nrl_mean,nrl_surf_el_detlcl"
       format="image/png"
@@ -156,24 +99,19 @@
       EN="NRL STD Water Temp"
       name="NRL_STD/water_temp" />
 
-    <layer Menu="models,nrl_std,nrl_water_u"
-      format="image/png"
-      server="http://159.203.107.216:8080/ncWMS/wms"
-      EN="NRL STD Water U"
-      name="NRL_STD/water_u" />
-
     <layer Menu="models,nrl_std,nrl_water_v"
-      format="image/png"
       server="http://159.203.107.216:8080/ncWMS/wms"
-      EN="NRL STD Water V"
-      name="NRL_STD/water_v" />
+      format="image/png"
+      style="vector"
+      EN="NRL STD Sea Water Velocity"
+      name="NRL_STD/sea_water_velocity" />
 
-   <layer Menu="models,nrl_std,nrl_surf_el_detlcl"
+  <layer Menu="models,nrl_std,nrl_surf_el_detlcl"
       format="image/png"
       server="http://159.203.107.216:8080/ncWMS/wms"
       EN="NRL STD Surface Elevation"
       name="NRL_STD/surf_el_detlcl" />
-   <!-- NRL STD END -->
+  <!-- NRL STD END -->
 
    <!-- NCOM BEGIN -->
    <layer Menu="models,ncom"
