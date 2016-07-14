@@ -27,7 +27,7 @@ Author     : Olmo Zavala-Romero
 <!-- 			<ul class='opt_lay_list' id='optUl1'> -->
 <!-- 				<fieldset data-role="controlgroup"> -->
 <!-- 					<input type="checkbox" style= "margin-top:0px" id="checkBox1"> <a style="text-decoration: none; margin-left:35px; width: inherit">US States</a> -->
-<!-- 					<div style="float: right"> -->
+                                            <div>
 <!-- 						<a class="btn btn-default btn-xs" href="#" -->
 <!-- 							id="minusButtonOptional1"> <span -->
 <!-- 							class="glyphicon glyphicon-minus "></span> -->
@@ -40,7 +40,7 @@ Author     : Olmo Zavala-Romero
 <!-- 							src="/OWGIS_V2/common/images/Download/LayerDownload.png" -->
 <!-- 							border="0" /> -->
 <!-- 						</A> -->
-<!-- 					</div> -->
+                                            </div>
 <!-- 				</fieldset> -->
 <!-- 			</ul> -->
 <!-- 		</ul> -->

@@ -10,9 +10,12 @@
      <Menu ID="nrl_water_temp" EN="Water Temperature" />
      <Menu ID="nrl_water_u" EN="Water U" />
      <Menu ID="nrl_water_v" EN="Sea Water Velocity" />
+     <Menu ID="ncom_water_v" EN="Sea Water Velocity" />
      <Menu ID="nrl_surf_el_detlcl" EN="Surface Elevation" />
-     <Menu ID="ncom" EN="NCOM Velocity" />
+     <Menu ID="ncom" EN="NCOM" />
+     <Menu ID="hfdac" EN="HF DAC" />
      <Menu ID="gcoos4" EN="gcoos4 THREDDS" />
+     <Menu ID="testing" EN="Layer Test" />
     </Menus>
     <!-- Menus End -->
 
@@ -27,51 +30,103 @@
     <OptionalLayers BBOX="-98,18,-79,30.9"
      format="image/png"  server="http://159.203.107.216:8080/ncWMS/wms"
      ncWMS="true">
-     <!-- Models Begin -->
+    <!-- Models Begin -->
+    <!-- NRL STD BEGIN -->
+    <layer Menu="models,nrl,nrl_std,nrl_water_temp"
+        format="image/png"
+        server="http://159.203.107.216:8080/ncWMS/wms"
+        EN="NRL STD Water Temp"
+        name="NRL_STD/water_temp" />
+
+     <layer Menu="models,nrl,nrl_std,nrl_water_v"
+        server="http://159.203.107.216:8080/ncWMS/wms"
+        format="image/png"
+        style="vector"
+        EN="NRL STD Sea Water Velocity"
+        name="NRL_STD/sea_water_velocity" />
+
+    <layer Menu="models,nrl,nrl_std,nrl_surf_el_detlcl"
+        format="image/png"
+        server="http://159.203.107.216:8080/ncWMS/wms"
+        EN="NRL STD Surface Elevation"
+        name="NRL_STD/surf_el_detlcl" />
+    <!-- NRL STD END -->
+    <!-- NRL MEAN Begin -->
+     <layer Menu="models,nrl,nrl_mean,nrl_water_temp"
+        server="http://159.203.107.216:8080/ncWMS/wms"
+        format="image/png"
+        EN="NRL Mean Water Temp"
+        name="NRL_MEAN/water_temp" />
+
+     <layer Menu="models,nrl,nrl_mean,nrl_water_v"
+        server="http://159.203.107.216:8080/ncWMS/wms"
+        format="image/png"
+        style="vector"
+        EN="NRL Mean Sea Water Velocity"
+        name="NRL_MEAN/sea_water_velocity" />
+
+    <layer Menu="models,nrl,nrl_mean,nrl_surf_el_detlcl"
+        format="image/png"
+        server="http://159.203.107.216:8080/ncWMS/wms"
+        EN="NRL Mean Surface Elevation"
+        name="NRL_MEAN/surf_el_detlcl" />
+    <!-- NRL MEAN END -->
+
+
      <!-- NCOM BEGIN -->
-     <layer Menu="models,ncom"
+     <layer Menu="models,ncom,ncom_water_v"
         format="image/png"
         server="http://ecowatch.ncddc.noaa.gov/thredds/wms/ncom_amseas_agg/AmSeas_Apr_05_2013_to_Current_best.ncd"
         EN="NCOM Velocity"
         style="vector"
         name="sea_water_velocity" />
      <!-- NCOM END -->
-     <!-- Models End -->
 
      <!-- Observations Begin -->
-     <layer Menu="observations,6kmCODAR"
+     <layer Menu="observations,hfdac,6kmCODAR"
         format="image/png"  server="http://hfrnet.ucsd.edu/thredds/wms/HFR/USEGC/6km/hourly/RTV/HFRADAR,_US_East_and_Gulf_Coast,_6km_Resolution,_Hourly_RTV_best.ncd"
         EN="6km CODAR"
         max_time_range="month"
         style="vector"
         name="surface_sea_water_velocity"/>
-     <!-- Observations End -->
+    <!-- Observations End -->
 
-    </OptionalLayers>
+    <!-- GCOOS4 Test Begin -->
+     <layer Menu="testing,gcoos4,nrl_mean,nrl_water_temp"
+        server="http://gcoos4.tamu.edu:8080/thredds/wms/nrl_mean/out/2016_MEAN_best.ncd"
+        format="image/png"
+        EN="GCOOS4 NRL Mean Water Temp"
+        name="water_temp" />
+     <!-- GCOOS4 Test End -->
     <!-- Optional Layers End -->
+    </OptionalLayers>
 
     <!--Main Layers Begin -->
     <MainLayers BBOX="-98,18,-79,30.9"
      format="image/png"  server="http://159.203.107.216:8080/ncWMS/wms"
      ncWMS="true" max_time_range="month">
 
-     <!-- Observations Begin -->
-     <layer Menu="observations,6kmCODAR"
-        format="image/png"  server="http://hfrnet.ucsd.edu/thredds/wms/HFR/USEGC/6km/hourly/RTV/HFRADAR,_US_East_and_Gulf_Coast,_6km_Resolution,_Hourly_RTV_best.ncd"
-        EN="6km CODAR"
-        style="vector"
-        name="surface_sea_water_velocity" />
-     <!-- Observations End -->
-
-     <!-- Models Begin -->
-
-     <!-- GCOOS4 Test Begin
-     <layer Menu="models,gcoos4,nrl_water_temp"
-        server="http://gcoos4.tamu.edu:8080/thredds/wms/nrl_mean/out/2016_MEAN_best.ncd"
+    <!-- Models Begin -->
+    <!-- NRL STD BEGIN -->
+    <layer Menu="models,nrl,nrl_std,nrl_water_temp"
         format="image/png"
-        EN="GCOOS4 NRL Mean Water Temp"
-        name="water_temp" />
-     GCOOS4 Test End -->
+        server="http://159.203.107.216:8080/ncWMS/wms"
+        EN="NRL STD Water Temp"
+        name="NRL_STD/water_temp" />
+
+     <layer Menu="models,nrl,nrl_std,nrl_water_v"
+        server="http://159.203.107.216:8080/ncWMS/wms"
+        format="image/png"
+        style="vector"
+        EN="NRL STD Sea Water Velocity"
+        name="NRL_STD/sea_water_velocity" />
+
+    <layer Menu="models,nrl,nrl_std,nrl_surf_el_detlcl"
+        format="image/png"
+        server="http://159.203.107.216:8080/ncWMS/wms"
+        EN="NRL STD Surface Elevation"
+        name="NRL_STD/surf_el_detlcl" />
+     <!-- NRL STD END -->
 
      <!-- NRL MEAN Begin -->
      <layer Menu="models,nrl,nrl_mean,nrl_water_temp"
@@ -94,29 +149,8 @@
         name="NRL_MEAN/surf_el_detlcl" />
     <!-- NRL MEAN END -->
 
-    <!-- NRL STD BEGIN -->
-    <layer Menu="models,nrl,nrl_std,nrl_water_temp"
-        format="image/png"
-        server="http://159.203.107.216:8080/ncWMS/wms"
-        EN="NRL STD Water Temp"
-        name="NRL_STD/water_temp" />
-
-     <layer Menu="models,nrl,nrl_std,nrl_water_v"
-        server="http://159.203.107.216:8080/ncWMS/wms"
-        format="image/png"
-        style="vector"
-        EN="NRL STD Sea Water Velocity"
-        name="NRL_STD/sea_water_velocity" />
-
-    <layer Menu="models,nrl,nrl_std,nrl_surf_el_detlcl"
-        format="image/png"
-        server="http://159.203.107.216:8080/ncWMS/wms"
-        EN="NRL STD Surface Elevation"
-        name="NRL_STD/surf_el_detlcl" />
-    <!-- NRL STD END -->
-
     <!-- NCOM BEGIN -->
-    <layer Menu="models,ncom"
+    <layer Menu="models,ncom,ncom_water_v"
         format="image/png"
         server="http://ecowatch.ncddc.noaa.gov/thredds/wms/ncom_amseas_agg/AmSeas_Apr_05_2013_to_Current_best.ncd"
         EN="NCOM Velocity"
@@ -124,6 +158,14 @@
         name="sea_water_velocity" />
     <!-- NCOM END -->
     <!-- Models End -->
+    <!-- Observations Begin -->
+     <layer Menu="observations,hfdac,6kmCODAR"
+        format="image/png"  server="http://hfrnet.ucsd.edu/thredds/wms/HFR/USEGC/6km/hourly/RTV/HFRADAR,_US_East_and_Gulf_Coast,_6km_Resolution,_Hourly_RTV_best.ncd"
+        EN="6km CODAR"
+        style="vector"
+        name="surface_sea_water_velocity" />
+     <!-- Observations End -->
+>
     </MainLayers>
     <!-- MainLayers End -->
 </MenuConf>

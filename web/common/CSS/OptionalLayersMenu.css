@@ -106,4 +106,6 @@
 .opt_lay_par {
   margin: 0px;
   font-size: 13px;
+  text-align: left;
+  padding-right: 10px;
 }

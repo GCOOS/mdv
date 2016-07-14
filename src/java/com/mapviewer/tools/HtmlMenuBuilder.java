@@ -203,8 +203,8 @@ public class HtmlMenuBuilder {
 				String oldtab = tabs;
 				tabs += "\t";
 				finalHtml += getOptionalCheckbox(numLayer, tabs, currentNode.isSelected(), currMenuStr, mobile)
-						+ tabs + menu.getText(language) + "\n"
-						+ tabs + "<span style='float: right'>\n";
+						+ tabs + menu.getText(language) + "\n";
+						//+ tabs + "<span style='float: right'>\n";
 	
 				tabs += "\t";
 				finalHtml += getMinusTransButton(numLayer, tabs, mobile)
