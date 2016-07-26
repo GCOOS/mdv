@@ -1,27 +1,27 @@
 <MenuConf xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="schema.xsd">
     <!-- Menus Begin -->
     <Menus>
-     <Menu ID="observations" EN="Observations" />
-     <Menu ID="models" EN="Models" />
-     <Menu ID="nrl" EN="NRL GOMEX-PPP" />
-     <Menu ID="6kmCODAR" EN="6km CODAR" />
-     <Menu ID="nrl_std" EN="STD" />
-     <Menu ID="nrl_mean" EN="MEAN" />
-     <Menu ID="nrl_water_temp" EN="Water Temperature" />
-     <Menu ID="nrl_water_u" EN="Water U" />
-     <Menu ID="nrl_water_v" EN="Sea Water Velocity" />
-     <Menu ID="ncom_water_v" EN="Sea Water Velocity" />
-     <Menu ID="nrl_surf_el_detlcl" EN="Surface Elevation" />
-     <Menu ID="ncom" EN="NCOM" />
-     <Menu ID="hfdac" EN="HF DAC" />
-     <Menu ID="gcoos4" EN="gcoos4 THREDDS" />
-     <Menu ID="testing" EN="Layer Test" />
+    	<Menu ID="observations" EN="Observations" />
+    	<Menu ID="models" EN="Models" />
+    	<Menu ID="nrl" EN="NRL Ensemble" />
+    	<Menu ID="6kmCODAR" EN="6km CODAR" />
+    	<Menu ID="nrl_std" EN="STD" />
+     	<Menu ID="nrl_mean" EN="MEAN" />
+     	<Menu ID="nrl_water_temp" EN="Water Temperature" />
+     	<Menu ID="nrl_water_u" EN="Water U" />
+     	<Menu ID="nrl_water_v" EN="Sea Water Velocity" />
+     	<Menu ID="ncom_water_v" EN="Sea Water Velocity" />
+     	<Menu ID="nrl_surf_el_detlcl" EN="Surface Elevation" />
+     	<Menu ID="ncom" EN="NCOM" />
+     	<Menu ID="hfdac" EN="HF DAC" />
+     	<Menu ID="gcoos4" EN="gcoos4 THREDDS" />
+     	<Menu ID="testing" EN="Layer Test" />
     </Menus>
     <!-- Menus End -->
 
     <!-- Background Layers Begin -->
     <BackgroundLayers BBOX="-180,-90,180,90" server="http://ncwms.coaps.fsu.edu/geoserver/wms">
-     <layer name="comm:pyrResult512" featureInfo="comm:gebco"/>
+    	<layer name="comm:pyrResult512" featureInfo="comm:gebco"/>
     </BackgroundLayers>
     <!-- Background Layers End -->
 
@@ -31,6 +31,27 @@
      format="image/png"  server="http://159.203.107.216:8080/ncWMS/wms"
      ncWMS="true">
     <!-- Models Begin -->
+    <!-- NRL MEAN Begin -->
+    <layer Menu="models,nrl,nrl_mean,nrl_water_v"
+        server="http://159.203.107.216:8080/ncWMS/wms"
+        format="image/png"
+        style="vector"
+        EN="NRL Mean Sea Water Velocity"
+        name="NRL_MEAN/sea_water_velocity" />
+
+     <layer Menu="models,nrl,nrl_mean,nrl_water_temp"
+        server="http://159.203.107.216:8080/ncWMS/wms"
+        format="image/png"
+        EN="NRL Mean Water Temp"
+        name="NRL_MEAN/water_temp" />
+
+    <layer Menu="models,nrl,nrl_mean,nrl_surf_el_detlcl"
+        format="image/png"
+        server="http://159.203.107.216:8080/ncWMS/wms"
+        EN="NRL Mean Surface Elevation"
+        name="NRL_MEAN/surf_el_detlcl" />
+    <!-- NRL MEAN END -->
+
     <!-- NRL STD BEGIN -->
     <layer Menu="models,nrl,nrl_std,nrl_water_temp"
         format="image/png"
@@ -51,29 +72,7 @@
         EN="NRL STD Surface Elevation"
         name="NRL_STD/surf_el_detlcl" />
     <!-- NRL STD END -->
-    <!-- NRL MEAN Begin -->
-     <layer Menu="models,nrl,nrl_mean,nrl_water_temp"
-        server="http://159.203.107.216:8080/ncWMS/wms"
-        format="image/png"
-        EN="NRL Mean Water Temp"
-        name="NRL_MEAN/water_temp" />
-
-     <layer Menu="models,nrl,nrl_mean,nrl_water_v"
-        server="http://159.203.107.216:8080/ncWMS/wms"
-        format="image/png"
-        style="vector"
-        EN="NRL Mean Sea Water Velocity"
-        name="NRL_MEAN/sea_water_velocity" />
-
-    <layer Menu="models,nrl,nrl_mean,nrl_surf_el_detlcl"
-        format="image/png"
-        server="http://159.203.107.216:8080/ncWMS/wms"
-        EN="NRL Mean Surface Elevation"
-        name="NRL_MEAN/surf_el_detlcl" />
-    <!-- NRL MEAN END -->
-
-
-     <!-- NCOM BEGIN -->
+    <!-- NCOM BEGIN -->
      <layer Menu="models,ncom,ncom_water_v"
         format="image/png"
         server="http://ecowatch.ncddc.noaa.gov/thredds/wms/ncom_amseas_agg/AmSeas_Apr_05_2013_to_Current_best.ncd"
@@ -107,6 +106,27 @@
      ncWMS="true" max_time_range="month">
 
     <!-- Models Begin -->
+    <!-- NRL MEAN Begin -->
+    <layer Menu="models,nrl,nrl_mean,nrl_water_v"
+        server="http://159.203.107.216:8080/ncWMS/wms"
+        format="image/png"
+        style="vector"
+        EN="NRL Mean Sea Water Velocity"
+        name="NRL_MEAN/sea_water_velocity" />
+
+     <layer Menu="models,nrl,nrl_mean,nrl_water_temp"
+        server="http://159.203.107.216:8080/ncWMS/wms"
+        format="image/png"
+        EN="NRL Mean Water Temp"
+        name="NRL_MEAN/water_temp" />
+
+    <layer Menu="models,nrl,nrl_mean,nrl_surf_el_detlcl"
+        format="image/png"
+        server="http://159.203.107.216:8080/ncWMS/wms"
+        EN="NRL Mean Surface Elevation"
+        name="NRL_MEAN/surf_el_detlcl" />
+    <!-- NRL MEAN END -->
+
     <!-- NRL STD BEGIN -->
     <layer Menu="models,nrl,nrl_std,nrl_water_temp"
         format="image/png"
@@ -126,29 +146,7 @@
         server="http://159.203.107.216:8080/ncWMS/wms"
         EN="NRL STD Surface Elevation"
         name="NRL_STD/surf_el_detlcl" />
-     <!-- NRL STD END -->
-
-     <!-- NRL MEAN Begin -->
-     <layer Menu="models,nrl,nrl_mean,nrl_water_temp"
-        server="http://159.203.107.216:8080/ncWMS/wms"
-        format="image/png"
-        EN="NRL Mean Water Temp"
-        name="NRL_MEAN/water_temp" />
-
-     <layer Menu="models,nrl,nrl_mean,nrl_water_v"
-        server="http://159.203.107.216:8080/ncWMS/wms"
-        format="image/png"
-        style="vector"
-        EN="NRL Mean Sea Water Velocity"
-        name="NRL_MEAN/sea_water_velocity" />
-
-    <layer Menu="models,nrl,nrl_mean,nrl_surf_el_detlcl"
-        format="image/png"
-        server="http://159.203.107.216:8080/ncWMS/wms"
-        EN="NRL Mean Surface Elevation"
-        name="NRL_MEAN/surf_el_detlcl" />
-    <!-- NRL MEAN END -->
-
+    <!-- NRL STD END -->
     <!-- NCOM BEGIN -->
     <layer Menu="models,ncom,ncom_water_v"
         format="image/png"
@@ -165,7 +163,6 @@
         style="vector"
         name="surface_sea_water_velocity" />
      <!-- Observations End -->
->
     </MainLayers>
     <!-- MainLayers End -->
 </MenuConf>
