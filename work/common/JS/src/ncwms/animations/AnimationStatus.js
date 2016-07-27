@@ -22,7 +22,7 @@ owgis.ncwms.animation.status.getResolutionRatio = function getResolutionRatio(){
 	var selectedRes = $("[name=video_res]:checked").val(); 
 	switch(selectedRes){
 		case "high":
-			return .55;
+			return .85;
 			break;
 		case "normal":
 			return .3;
