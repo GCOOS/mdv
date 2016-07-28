@@ -22,6 +22,8 @@ owgis.ncwms.animation.status.getResolutionRatio = function getResolutionRatio(){
 	var selectedRes = $("[name=video_res]:checked").val(); 
 	switch(selectedRes){
 		case "high":
+			//2016-07-28 changed by bob.currier@gcoos.org to .85 from .55
+			//This was causing high res to show as normal
 			return .85;
 			break;
 		case "normal":
