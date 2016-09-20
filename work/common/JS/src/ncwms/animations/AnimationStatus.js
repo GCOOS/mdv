@@ -27,10 +27,10 @@ owgis.ncwms.animation.status.getResolutionRatio = function getResolutionRatio(){
 			return .85;
 			break;
 		case "normal":
-			return .3;
+			return .85;
 			break;
 		case "low":
-			return .2;
+			return .85;
 			break;
 	}
 }
@@ -40,13 +40,13 @@ owgis.ncwms.animation.status.getResolutionRatioCurrents = function getResolution
 	var selectedRes = $("[name=video_res]:checked").val(); 
 	switch(selectedRes){
 		case "high":
-			return .8;
+			return .85;
 			break;
 		case "normal":
-			return .5;
+			return .85;
 			break;
 		case "low":
-			return .25;
+			return .85;
 			break;
 	}
 }
