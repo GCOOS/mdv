@@ -21,7 +21,9 @@
         <Menu ID="moor" EN="Moorings" ES="Moorings"/>
         <Menu ID="nexrad" EN="NEXRAD"/>
         <Menu ID="gulfoceanenergy" EN="Gulf Ocean Energy"/>
-        <Menu ID="platforms_and_pipelines" EN="Platforms/Pipelines"/>
+        <Menu ID="lease_blocks" EN="Lease Blocks"/>
+        <Menu ID="pipelines" EN="Pipelines"/>
+        <Menu ID="platforms" EN="Platforms"/>
     </Menus>
     <!-- Menus End -->
 
