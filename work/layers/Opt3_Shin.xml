@@ -1,0 +1,12 @@
+<!-- This xml file contains the configuration -->
+<MenuConf xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="schema.xsd">
+
+  <!-- Main Menus -->
+  <MainLayers>
+      <layer Menu="gulfoceanenergy,platforms_and_pipelines" EN="Platforms/Pipelines" name="0"
+      server="http://gcoos3.tamu.edu/arcgis/services/OceanEnergy/Platforms_Pipelines/MapServer/WMSServer"
+      BBOX="-180,-90,180,90"
+      style="default" />
+  </MainLayers>
+</MenuConf>
+
