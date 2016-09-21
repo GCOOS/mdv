@@ -1,0 +1,30 @@
+<MenuConf xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="schema.xsd">
+<!-- Menus Begin -->
+<Menus>
+  <Menu ID="observations" EN="Observations" />
+  <Menu ID="models" EN="Models" />
+  <Menu ID="nrl" EN="NRL Ensemble" />
+  <Menu ID="6kmCODAR" EN="6km CODAR" />
+  <Menu ID="nexrad" EN="NEXRAD" />
+  <Menu ID="nrl_std" EN="STD" />
+  <Menu ID="nrl_mean" EN="MEAN" />
+  <Menu ID="nrl_water_temp" EN="Water Temperature" />
+  <Menu ID="nrl_water_u" EN="Water U" />
+  <Menu ID="nrl_water_v" EN="Sea Water Velocity" />
+  <Menu ID="ncom_water_v" EN="Sea Water Velocity" />
+  <Menu ID="hycom_water_v" EN="Sea Water Velocity" />
+  <Menu ID="nrl_surf_el_detlcl" EN="Surface Elevation" />
+  <Menu ID="ncom" EN="NCOM" />
+  <Menu ID="hycom" EN="Global HYCOM" />
+  <Menu ID="hfdac" EN="HF DAC" />
+  <Menu ID="gcoos4" EN="gcoos4 THREDDS" />
+  <Menu ID="moor" EN="Moorings" ES="Moorings"/>
+  <Menu ID="nexrad" EN="NEXRAD"/>
+  <Menu ID="gulfoceanenergy" EN="Gulf Ocean Energy"/>
+  <Menu ID="lease_blocks" EN="Lease Blocks"/>
+  <Menu ID="pipelines" EN="Pipelines"/>
+  <Menu ID="platforms" EN="Platforms"/>
+  <Menu ID="sst" EN="SST"/>
+</Menus>
+<!-- Menus End -->
+</MenuConf>

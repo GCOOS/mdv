@@ -1,0 +1,113 @@
+<!-- This xml file contains the configuration -->
+<MenuConf xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="schema.xsd">
+  <OptionalLayers> 
+  <!-- NRL MEAN Begin -->
+  <layer Menu="models,nrl,nrl_mean,nrl_water_v"
+    server="http://gcoos-mdv.gcoos.org:8080/ncWMS/wms"
+    format="image/png"
+    style="vector"
+    EN="NRL Mean Sea Water Velocity"
+    name="NRL_MEAN/sea_water_velocity" />
+  <layer Menu="models,nrl,nrl_mean,nrl_water_temp"
+    server="http://gcoos-mdv.gcoos.org:8080/ncWMS/wms"
+    format="image/png"
+    EN="NRL Mean Water Temp"
+    name="NRL_MEAN/water_temp" />
+
+  <layer Menu="models,nrl,nrl_mean,nrl_surf_el_detlcl"
+    format="image/png"
+    server="http://gcoos-mdv.gcoos.org:8080/ncWMS/wms"
+    EN="NRL Mean Surface Elevation"
+    name="NRL_MEAN/surf_el_detlcl" />
+  </OptionalLayers>
+  <!-- NRL MEAN END -->
+
+  <!-- NRL STD BEGIN -->
+  <OptionalLayers>
+  <layer Menu="models,nrl,nrl_std,nrl_water_temp"
+    format="image/png"
+    server="http://gcoos-mdv.gcoos.org:8080/ncWMS/wms"
+    EN="NRL STD Water Temp"
+    name="NRL_STD/water_temp" />
+
+  <layer Menu="models,nrl,nrl_std,nrl_water_v"
+    server="http://gcoos-mdv.gcoos.org:8080/ncWMS/wms"
+    format="image/png"
+    style="vector"
+    EN="NRL STD Sea Water Velocity"
+    name="NRL_STD/sea_water_velocity" />
+
+  <layer Menu="models,nrl,nrl_std,nrl_surf_el_detlcl"
+    format="image/png"
+    server="http://gcoos-mdv.gcoos.org:8080/ncWMS/wms"
+    EN="NRL STD Surface Elevation"
+    name="NRL_STD/surf_el_detlcl" />
+  </OptionalLayers>
+  <!-- NRL STD END -->
+  
+  <!-- NCOM BEGIN -->
+  <OptionalLayers>
+  <layer Menu="models,ncom,ncom_water_v"
+    format="image/png"
+    server="http://ecowatch.ncddc.noaa.gov/thredds/wms/ncom_amseas_agg/AmSeas_Apr_05_2013_to_Current_best.ncd"
+    EN="NCOM Velocity"
+    style="vector"
+    name="sea_water_velocity" />
+  </OptionalLayers>
+  <!-- NCOM END -->
+
+  <!-- HYCOM BEGIN -->
+  <OptionalLayers>
+  <layer Menu="models,hycom,hycom_water_v"
+    format="image/png"
+    server="http://ecowatch.ncddc.noaa.gov/thredds/wms/hycom/hycom_sfc_agg/HYCOM_Surface_Aggregation_best.ncd"
+    EN="Global HYCOM Velocity"
+    style="vector"
+    name="sea_water_velocity" />
+  </OptionalLayers>
+  <!-- HYCOM END -->
+  <!-- Models End -->
+
+  <!-- Observations Begin -->
+  <!-- NEXRAD -->
+  <OptionalLayers>
+    <layer Menu="observations,nexrad" EN="NEXRAD" name="1"
+      server="http://nowcoast.noaa.gov/arcgis/services/nowcoast/radar_meteo_imagery_nexrad_time/MapServer/WmsServer"
+      BBOX="-180,-90,180,90"
+      style="default" />
+  </OptionalLayers>
+  <!-- Moorings -->
+  <OptionalLayers BBOX="-120,-59.983333333333,-10,50.0166666666666" 
+    server="http://ncwms.coaps.fsu.edu/geoserver/wms"
+    format="image/jpeg"  
+    tiled="true" trans_effect="none" vectorLayer="true">
+    <layer Menu='observations,moor' EN='Moorings' name='postgis:moorings_view'
+    featureInfo="postgis:moorings_view,postgis:moorings_device_view" />
+  </OptionalLayers>
+  <!-- SST -->
+  <OptionalLayers>
+    <layer Menu="observations,sst" EN="NOAA nowCOAST SST" name="1"
+      server="http://nowcoast.noaa.gov/arcgis/services/nowcoast/analysis_ocean_sfc_sst_time/MapServer/WmsServer"
+      BBOX="-180,-90,180,90"
+      style="default" />
+  </OptionalLayers>
+  <!-- Observations End -->
+
+  <!-- Gulf Ocean Energy Begin -->
+  <OptionalLayers>
+    <layer Menu="gulfoceanenergy,lease_blocks" EN="Lease Blocks" name="0"
+    server="http://gcoos3.tamu.edu/arcgis/services/OceanEnergy/Platforms_Pipelines/MapServer/WMSServer"
+    BBOX="-180,-90,180,90"
+    style="default" />
+    <layer Menu="gulfoceanenergy,pipelines" EN="Pipelines as of 2016-06-06" name="1"
+    server="http://gcoos3.tamu.edu/arcgis/services/OceanEnergy/Platforms_Pipelines/MapServer/WMSServer"
+    BBOX="-180,-90,180,90"
+    style="default" />
+    <layer Menu="gulfoceanenergy,platforms" EN="Platforms as of 2016-06-06" name="2"
+    server="http://gcoos3.tamu.edu/arcgis/services/OceanEnergy/Platforms_Pipelines/MapServer/WMSServer"
+    BBOX="-180,-90,180,90"
+    style="default" />
+  </OptionalLayers>
+  <!-- Gulf Ocean Energy Ends -->
+  <!-- Optional Layers Ends -->
+</MenuConf>

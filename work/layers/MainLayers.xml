@@ -1,0 +1,90 @@
+<MenuConf xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="schema.xsd">
+  <!-- Background Layers Begin -->
+  <BackgroundLayers BBOX="-180,-90,180,90" server="http://ncwms.coaps.fsu.edu/geoserver/wms">
+    <layer name="comm:pyrResult512" featureInfo="comm:gebco"/>
+  </BackgroundLayers>
+  <!-- Background Layers End -->
+
+  <!--Main Layers Begin -->
+  <MainLayers BBOX="-98,18,-79,30.9"
+    format="image/png"  server="http://gcoos-mdv.gcoos.org:8080/ncWMS/wms"
+    ncWMS="true" max_time_range="month">
+
+  <!-- Models Begin -->
+  <!-- NRL MEAN Begin -->
+  <layer Menu="models,nrl,nrl_mean,nrl_water_v"
+    server="http://gcoos-mdv.gcoos.org:8080/ncWMS/wms"
+    format="image/png"
+    style="vector"
+    EN="NRL Mean Sea Water Velocity"
+    name="NRL_MEAN/sea_water_velocity" />
+  <layer Menu="models,nrl,nrl_mean,nrl_water_temp"
+    server="http://gcoos-mdv.gcoos.org:8080/ncWMS/wms"
+    format="image/png"
+    EN="NRL Mean Water Temp"
+    name="NRL_MEAN/water_temp" />
+
+  <layer Menu="models,nrl,nrl_mean,nrl_surf_el_detlcl"
+    format="image/png"
+    server="http://gcoos-mdv.gcoos.org:8080/ncWMS/wms"
+    EN="NRL Mean Surface Elevation"
+    name="NRL_MEAN/surf_el_detlcl" />
+  </MainLayers>
+  <!-- NRL MEAN END -->
+
+  <!-- NRL STD BEGIN -->
+  <MainLayers>
+  <layer Menu="models,nrl,nrl_std,nrl_water_temp"
+    format="image/png"
+    server="http://gcoos-mdv.gcoos.org:8080/ncWMS/wms"
+    EN="NRL STD Water Temp"
+    name="NRL_STD/water_temp" />
+
+  <layer Menu="models,nrl,nrl_std,nrl_water_v"
+    server="http://gcoos-mdv.gcoos.org:8080/ncWMS/wms"
+    format="image/png"
+    style="vector"
+    EN="NRL STD Sea Water Velocity"
+    name="NRL_STD/sea_water_velocity" />
+
+  <layer Menu="models,nrl,nrl_std,nrl_surf_el_detlcl"
+    format="image/png"
+    server="http://gcoos-mdv.gcoos.org:8080/ncWMS/wms"
+    EN="NRL STD Surface Elevation"
+    name="NRL_STD/surf_el_detlcl" />
+  </MainLayers>
+  <!-- NRL STD END -->
+  
+  <!-- NCOM BEGIN -->
+  <MainLayers>
+  <layer Menu="models,ncom,ncom_water_v"
+    format="image/png"
+    server="http://ecowatch.ncddc.noaa.gov/thredds/wms/ncom_amseas_agg/AmSeas_Apr_05_2013_to_Current_best.ncd"
+    EN="NCOM Velocity"
+    style="vector"
+    name="sea_water_velocity" />
+  </MainLayers>
+  <!-- NCOM END -->
+
+  <!-- HYCOM BEGIN -->
+  <MainLayers>
+  <layer Menu="models,hycom,hycom_water_v"
+    format="image/png"
+    server="http://ecowatch.ncddc.noaa.gov/thredds/wms/hycom/hycom_sfc_agg/HYCOM_Surface_Aggregation_best.ncd"
+    EN="Global HYCOM Velocity"
+    style="vector"
+    name="sea_water_velocity" />
+  </MainLayers>
+  <!-- HYCOM END -->
+  <!-- Models End -->
+
+  <!-- Observations Begin -->
+  <MainLayers>
+  <layer Menu="observations,nexrad" EN="NEXRAD" name="1"
+    server="http://nowcoast.noaa.gov/arcgis/services/nowcoast/radar_meteo_imagery_nexrad_time/MapServer/WmsServer"
+    BBOX="-180,-90,180,90"
+    style="default" />
+  </MainLayers>
+  <!-- Observations End -->
+<!-- MainLayers End -->
+</MenuConf>
