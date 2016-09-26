@@ -1,20 +1,24 @@
 <!-- This xml file contains the configuration -->
 <MenuConf xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="schema.xsd">
-  <OptionalLayers> 
   <!-- NRL MEAN Begin -->
-  <layer Menu="models,nrl,nrl_mean,nrl_water_v"
+  <OptionalLayers> 
+    <layer Menu="models,nrl,nrl_mean,nrl_water_v"
     server="http://gcoos-mdv.gcoos.org:8080/ncWMS/wms"
     format="image/png"
     style="vector"
     EN="NRL Mean Sea Water Velocity"
     name="NRL_MEAN/sea_water_velocity" />
-  <layer Menu="models,nrl,nrl_mean,nrl_water_temp"
+  </OptionalLayers>
+  <OptionalLayers> 
+    <layer Menu="models,nrl,nrl_mean,nrl_water_temp"
     server="http://gcoos-mdv.gcoos.org:8080/ncWMS/wms"
     format="image/png"
     EN="NRL Mean Water Temp"
     name="NRL_MEAN/water_temp" />
+  </OptionalLayers>
 
-  <layer Menu="models,nrl,nrl_mean,nrl_surf_el_detlcl"
+  <OptionalLayers> 
+    <layer Menu="models,nrl,nrl_mean,nrl_surf_el_detlcl"
     format="image/png"
     server="http://gcoos-mdv.gcoos.org:8080/ncWMS/wms"
     EN="NRL Mean Surface Elevation"
@@ -24,20 +28,24 @@
 
   <!-- NRL STD BEGIN -->
   <OptionalLayers>
-  <layer Menu="models,nrl,nrl_std,nrl_water_temp"
+    <layer Menu="models,nrl,nrl_std,nrl_water_temp"
     format="image/png"
     server="http://gcoos-mdv.gcoos.org:8080/ncWMS/wms"
     EN="NRL STD Water Temp"
     name="NRL_STD/water_temp" />
+  </OptionalLayers>
 
-  <layer Menu="models,nrl,nrl_std,nrl_water_v"
+  <OptionalLayers>
+    <layer Menu="models,nrl,nrl_std,nrl_water_v"
     server="http://gcoos-mdv.gcoos.org:8080/ncWMS/wms"
     format="image/png"
     style="vector"
     EN="NRL STD Sea Water Velocity"
     name="NRL_STD/sea_water_velocity" />
+  </OptionalLayers>
 
-  <layer Menu="models,nrl,nrl_std,nrl_surf_el_detlcl"
+  <OptionalLayers>
+    <layer Menu="models,nrl,nrl_std,nrl_surf_el_detlcl"
     format="image/png"
     server="http://gcoos-mdv.gcoos.org:8080/ncWMS/wms"
     EN="NRL STD Surface Elevation"
@@ -47,7 +55,7 @@
   
   <!-- NCOM BEGIN -->
   <OptionalLayers>
-  <layer Menu="models,ncom,ncom_water_v"
+    <layer Menu="models,ncom,ncom_water_v"
     format="image/png"
     server="http://ecowatch.ncddc.noaa.gov/thredds/wms/ncom_amseas_agg/AmSeas_Apr_05_2013_to_Current_best.ncd"
     EN="NCOM Velocity"
@@ -58,7 +66,7 @@
 
   <!-- HYCOM BEGIN -->
   <OptionalLayers>
-  <layer Menu="models,hycom,hycom_water_v"
+    <layer Menu="models,hycom,hycom_water_v"
     format="image/png"
     server="http://ecowatch.ncddc.noaa.gov/thredds/wms/hycom/hycom_sfc_agg/HYCOM_Surface_Aggregation_best.ncd"
     EN="Global HYCOM Velocity"
@@ -76,14 +84,6 @@
       BBOX="-180,-90,180,90"
       style="default" />
   </OptionalLayers>
-  <!-- Moorings -->
-  <OptionalLayers BBOX="-120,-59.983333333333,-10,50.0166666666666" 
-    server="http://ncwms.coaps.fsu.edu/geoserver/wms"
-    format="image/jpeg"  
-    tiled="true" trans_effect="none" vectorLayer="true">
-    <layer Menu='observations,moor' EN='Moorings' name='postgis:moorings_view'
-    featureInfo="postgis:moorings_view,postgis:moorings_device_view" />
-  </OptionalLayers>
   <!-- SST -->
   <OptionalLayers>
     <layer Menu="observations,sst" EN="NOAA nowCOAST SST" name="1"
@@ -91,6 +91,30 @@
       BBOX="-180,-90,180,90"
       style="default" />
   </OptionalLayers>
+  <OptionalLayers>
+    <layer Menu="observations,cyclones,tracklinesO" EN="NOAA Tropical Cyclone Observed Tracks" name="3"
+      server="http://nowcoast.noaa.gov/arcgis/services/nowcoast/wwa_meteocean_tropicalcyclones_trackintensityfcsts_time/MapServer/WmsServer"
+      BBOX="-180,-90,180,90"
+      style="default" />
+  </OptionalLayers>
+  <OptionalLayers>
+    <layer Menu="observations,cyclones,centerposO" EN="NOAA Tropical Cyclone Observed Center Positions" name="4"
+      server="http://nowcoast.noaa.gov/arcgis/services/nowcoast/wwa_meteocean_tropicalcyclones_trackintensityfcsts_time/MapServer/WmsServer"
+      BBOX="-180,-90,180,90"
+      style="default" />
+  </OptionalLayers>
+  <OptionalLayers>
+    <layer Menu="observations,cyclones,centerposF" EN="NOAA Tropical Cyclone Center Forecast" name="8"
+      server="http://nowcoast.noaa.gov/arcgis/services/nowcoast/wwa_meteocean_tropicalcyclones_trackintensityfcsts_time/MapServer/WmsServer"
+      BBOX="-180,-90,180,90"                                                                                                 
+      style="default" />                                                                                                     
+  </OptionalLayers>                                                                                                              
+  <OptionalLayers>                                                                                                               
+    <layer Menu="observations,cyclones,watchwarn" EN="NOAA Tropical Cyclone Watches and Warnings" name="9"                   
+      server="http://nowcoast.noaa.gov/arcgis/services/nowcoast/wwa_meteocean_tropicalcyclones_trackintensityfcsts_time/MapServer/WmsServer"
+      BBOX="-180,-90,180,90"                                                                                                 
+      style="default" />                                                                                                     
+  </OptionalLayers>                                                                                                              
   <!-- Observations End -->
 
   <!-- Gulf Ocean Energy Begin -->
@@ -99,10 +123,14 @@
     server="http://gcoos3.tamu.edu/arcgis/services/OceanEnergy/Platforms_Pipelines/MapServer/WMSServer"
     BBOX="-180,-90,180,90"
     style="default" />
+  </OptionalLayers>
+  <OptionalLayers>
     <layer Menu="gulfoceanenergy,pipelines" EN="Pipelines as of 2016-06-06" name="1"
     server="http://gcoos3.tamu.edu/arcgis/services/OceanEnergy/Platforms_Pipelines/MapServer/WMSServer"
     BBOX="-180,-90,180,90"
     style="default" />
+  </OptionalLayers>
+  <OptionalLayers>
     <layer Menu="gulfoceanenergy,platforms" EN="Platforms as of 2016-06-06" name="2"
     server="http://gcoos3.tamu.edu/arcgis/services/OceanEnergy/Platforms_Pipelines/MapServer/WMSServer"
     BBOX="-180,-90,180,90"

@@ -25,6 +25,11 @@
   <Menu ID="pipelines" EN="Pipelines"/>
   <Menu ID="platforms" EN="Platforms"/>
   <Menu ID="sst" EN="SST"/>
+  <Menu ID="cyclones" EN="Cyclones"/>
+  <Menu ID="tracklinesO" EN="Obsv Tracklines"/>
+  <Menu ID="centerposO" EN="Obsv Centers"/>
+  <Menu ID="centerposF" EN="Forecast Centers"/>
+  <Menu ID="watchwarn" EN="Watches/Warnings"/>
 </Menus>
 <!-- Menus End -->
 </MenuConf>

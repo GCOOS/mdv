@@ -85,6 +85,30 @@
     BBOX="-180,-90,180,90"
     style="default" />
   </MainLayers>
+  <MainLayers>
+    <layer Menu="observations,cyclones,tracklinesO" EN="NOAA Tropical Cyclone Observed Tracks" name="3"
+      server="http://nowcoast.noaa.gov/arcgis/services/nowcoast/wwa_meteocean_tropicalcyclones_trackintensityfcsts_time/MapServer/WmsServer"
+      BBOX="-180,-90,180,90"
+      style="default" />
+  </MainLayers>
+  <MainLayers>
+    <layer Menu="observations,cyclones,centerposO" EN="NOAA Tropical Cyclone Observed Center Positions" name="4"
+      server="http://nowcoast.noaa.gov/arcgis/services/nowcoast/wwa_meteocean_tropicalcyclones_trackintensityfcsts_time/MapServer/WmsServer"
+      BBOX="-180,-90,180,90"
+      style="default" />
+  </MainLayers>
+  <MainLayers>
+    <layer Menu="observations,cyclones,centerposF" EN="NOAA Tropical Cyclone Center Forecast" name="8"
+      server="http://nowcoast.noaa.gov/arcgis/services/nowcoast/wwa_meteocean_tropicalcyclones_trackintensityfcsts_time/MapServer/WmsServer"
+      BBOX="-180,-90,180,90"
+      style="default" />
+  </MainLayers>
+  <MainLayers>
+    <layer Menu="observations,cyclones,watchwarn" EN="NOAA Tropical Cyclone Watches and Warnings" name="9"
+      server="http://nowcoast.noaa.gov/arcgis/services/nowcoast/wwa_meteocean_tropicalcyclones_trackintensityfcsts_time/MapServer/WmsServer"
+      BBOX="-180,-90,180,90"
+      style="default" />
+  </MainLayers>
   <!-- Observations End -->
 
   <!-- Gulf Ocean Energy Begin -->
