@@ -13,6 +13,7 @@
   <Menu ID="nrl_water_v" EN="Sea Water Velocity" />
   <Menu ID="ncom_water_v" EN="Sea Water Velocity" />
   <Menu ID="hycom_water_v" EN="Sea Water Velocity" />
+  <Menu ID="streamlines" EN="Velocity Streamlines" />
   <Menu ID="nrl_surf_el_detlcl" EN="Surface Elevation" />
   <Menu ID="ncom" EN="NCOM" />
   <Menu ID="hycom" EN="Global HYCOM" />
