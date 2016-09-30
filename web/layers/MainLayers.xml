@@ -14,11 +14,11 @@
   <!-- Models Begin -->
   <!-- Start with splash streamlines -->
   <!-- Surface water velocity 2010, 2011, 2012 -->
-  <MainLayers BBOX="-98.0,18.09164810180664,-76.400024,31.960647583007812" 
+  <MainLayers BBOX="-98.0,18.09164810180664,-76.400024,31.960647583007812"
     format="image/png"  server="http://ncwms.coaps.fsu.edu/ncWMS/wms"
     tiled="false" ncWMS="true" mincolor="-0.113" maxcolor="2.4" trans_effect="none"
     width="512" height="512" max_time_range="month">
-    <layer Menu="models,hycom,streamlines" 
+    <layer Menu="models,hycom,streamlines"
       EN="HYCOM + NCODA Gulf of Mexico 1/25&#176; Analysis &#60;br&#62; Sea water velocity 2016"
        name="hycom2016/sea_water_velocity"
        overlaystreamlines="hycom2016/sea_water_velocity" />
@@ -70,7 +70,7 @@
     name="NRL_STD/surf_el_detlcl" />
   </MainLayers>
   <!-- NRL STD END -->
-  
+
   <!-- NCOM BEGIN -->
   <MainLayers>
   <layer Menu="models,ncom,ncom_water_v"
@@ -143,9 +143,9 @@
     style="default" />
   </MainLayers>
   <MainLayers>
-    <layer Menu="gulfoceanenergy,modu" EN="MODU" name="0"                                  
-    server="http://gcoos3.tamu.edu/arcgis/services/OceanEnergy/Mobile_Offshore_Drilling_Units/MapServer/WMSServer"               
-    BBOX="-180,-90,180,90"                                                                                            
+    <layer Menu="gulfoceanenergy,modu" EN="Mobile Offshore Drilling Units as of 2016-09-30" name="0"
+        server="http://gcoos3.tamu.edu/arcgis/services/OceanEnergy/Mobile_Offshore_Drilling_Units/MapServer/WMSServer"
+    BBOX="-180,-90,180,90"
     style="default" />
   </MainLayers>
 

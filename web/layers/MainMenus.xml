@@ -25,7 +25,7 @@
   <Menu ID="lease_blocks" EN="Lease Blocks"/>
   <Menu ID="pipelines" EN="Pipelines"/>
   <Menu ID="platforms" EN="Platforms"/>
-  <Menu ID="modu" EN="Mobile Offshore Drilling Units"/>
+  <Menu ID="modu" EN="MODU"/>
   <Menu ID="sst" EN="SST"/>
   <Menu ID="cyclones" EN="Cyclones"/>
   <Menu ID="tracklinesO" EN="Obsv Tracklines"/>

@@ -1,7 +1,7 @@
 <!-- This xml file contains the configuration -->
 <MenuConf xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="schema.xsd">
   <!-- NRL MEAN Begin -->
-  <OptionalLayers> 
+  <OptionalLayers>
     <layer Menu="models,nrl,nrl_mean,nrl_water_v"
     server="http://gcoos-mdv.gcoos.org:8080/ncWMS/wms"
     format="image/png"
@@ -9,7 +9,7 @@
     EN="NRL Mean Sea Water Velocity"
     name="NRL_MEAN/sea_water_velocity" />
   </OptionalLayers>
-  <OptionalLayers> 
+  <OptionalLayers>
     <layer Menu="models,nrl,nrl_mean,nrl_water_temp"
     server="http://gcoos-mdv.gcoos.org:8080/ncWMS/wms"
     format="image/png"
@@ -17,7 +17,7 @@
     name="NRL_MEAN/water_temp" />
   </OptionalLayers>
 
-  <OptionalLayers> 
+  <OptionalLayers>
     <layer Menu="models,nrl,nrl_mean,nrl_surf_el_detlcl"
     format="image/png"
     server="http://gcoos-mdv.gcoos.org:8080/ncWMS/wms"
@@ -52,7 +52,7 @@
     name="NRL_STD/surf_el_detlcl" />
   </OptionalLayers>
   <!-- NRL STD END -->
-  
+
   <!-- NCOM BEGIN -->
   <OptionalLayers>
     <layer Menu="models,ncom,ncom_water_v"
@@ -106,20 +106,20 @@
   <OptionalLayers>
     <layer Menu="observations,cyclones,centerposF" EN="NOAA Tropical Cyclone Center Forecast" name="8"
       server="http://nowcoast.noaa.gov/arcgis/services/nowcoast/wwa_meteocean_tropicalcyclones_trackintensityfcsts_time/MapServer/WmsServer"
-      BBOX="-180,-90,180,90"                                                                                                 
-      style="default" />                                                                                                     
-  </OptionalLayers>                                                                                                              
-  <OptionalLayers>                                                                                                               
-    <layer Menu="observations,cyclones,watchwarn" EN="NOAA Tropical Cyclone Watches and Warnings" name="9"                   
+      BBOX="-180,-90,180,90"
+      style="default" />
+  </OptionalLayers>
+  <OptionalLayers>
+    <layer Menu="observations,cyclones,watchwarn" EN="NOAA Tropical Cyclone Watches and Warnings" name="9"
       server="http://nowcoast.noaa.gov/arcgis/services/nowcoast/wwa_meteocean_tropicalcyclones_trackintensityfcsts_time/MapServer/WmsServer"
-      BBOX="-180,-90,180,90"                                                                                                 
-      style="default" />                                                                                                     
-  </OptionalLayers>                                                                                                              
-  <OptionalLayers>                                                                                                    
-    <layer Menu="gulfoceanenergy,modu" EN="MODU" name="0"                                  
-    server="http://gcoos3.tamu.edu/arcgis/services/OceanEnergy/Mobile_Offshore_Drilling_Units/MapServer/WMSServer"               
-    BBOX="-180,-90,180,90"                                                                                            
-    style="default" />           
+      BBOX="-180,-90,180,90"
+      style="default" />
+  </OptionalLayers>
+  <OptionalLayers>
+    <layer Menu="gulfoceanenergy,modu" EN="Mobile Offshore Drilling Units as of 2016-09-30" name="0"
+      server="http://gcoos3.tamu.edu/arcgis/services/OceanEnergy/Mobile_Offshore_Drilling_Units/MapServer/WMSServer"
+      BBOX="-180,-90,180,90"
+      style="default" />
   </OptionalLayers>
   <!-- Observations End -->
 
