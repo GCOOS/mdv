@@ -142,6 +142,13 @@
     BBOX="-180,-90,180,90"
     style="default" />
   </MainLayers>
+  <MainLayers>
+    <layer Menu="gulfoceanenergy,modu" EN="MODU" name="0"                                  
+    server="http://gcoos3.tamu.edu/arcgis/services/OceanEnergy/Mobile_Offshore_Drilling_Units/MapServer/WMSServer"               
+    BBOX="-180,-90,180,90"                                                                                            
+    style="default" />
+  </MainLayers>
+
   <!-- Gulf Ocean Energy Ends -->
   <!-- Main Layers Ends -->
 <!-- MainLayers End -->
