@@ -30,6 +30,7 @@
   <Menu ID="cyclones" EN="Cyclones"/>
   <Menu ID="tracklinesO" EN="Obsv Tracklines"/>
   <Menu ID="centerposO" EN="Obsv Centers"/>
+  <Menu ID="coneU" EN="Cone of Uncertainty"/>
   <Menu ID="centerposF" EN="Forecast Centers"/>
   <Menu ID="watchwarn" EN="Watches/Warnings"/>
 </Menus>

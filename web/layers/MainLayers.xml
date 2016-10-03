@@ -114,6 +114,12 @@
       style="default" />
   </MainLayers>
   <MainLayers>
+    <layer Menu="observations,cyclones,coneU" EN="NOAA Tropical Cyclone Cone of Uncertainty" name="6"
+      server="http://nowcoast.noaa.gov/arcgis/services/nowcoast/wwa_meteocean_tropicalcyclones_trackintensityfcsts_time/MapServer/WmsServer"
+      BBOX="-180,-90,180,90"
+      style="default" />
+  </MainLayers>
+  <MainLayers>
     <layer Menu="observations,cyclones,centerposF" EN="NOAA Tropical Cyclone Center Forecast" name="8"
       server="http://nowcoast.noaa.gov/arcgis/services/nowcoast/wwa_meteocean_tropicalcyclones_trackintensityfcsts_time/MapServer/WmsServer"
       BBOX="-180,-90,180,90"
