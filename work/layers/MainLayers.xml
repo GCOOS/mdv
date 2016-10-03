@@ -29,6 +29,7 @@
   <layer Menu="models,nrl,nrl_mean,nrl_water_v"
     server="http://gcoos-mdv.gcoos.org:8080/ncWMS/wms"
     format="image/png"
+    ncWMS="true"
     style="vector"
     EN="NRL Mean Sea Water Velocity"
     name="NRL_MEAN/sea_water_velocity"
@@ -37,6 +38,7 @@
   <layer Menu="models,nrl,nrl_mean,nrl_water_temp"
     server="http://gcoos-mdv.gcoos.org:8080/ncWMS/wms"
     format="image/png"
+    ncWMS="true"
     EN="NRL Mean Water Temp"
     name="NRL_MEAN/water_temp" />
 
@@ -44,6 +46,7 @@
     format="image/png"
     server="http://gcoos-mdv.gcoos.org:8080/ncWMS/wms"
     EN="NRL Mean Surface Elevation"
+    ncWMS="true"
     name="NRL_MEAN/surf_el_detlcl" />
   </MainLayers>
   <!-- NRL MEAN END -->
@@ -52,6 +55,7 @@
   <MainLayers>
   <layer Menu="models,nrl,nrl_std,nrl_water_temp"
     format="image/png"
+    ncWMS="true"
     server="http://gcoos-mdv.gcoos.org:8080/ncWMS/wms"
     EN="NRL STD Water Temp"
     name="NRL_STD/water_temp" />
@@ -59,12 +63,14 @@
   <layer Menu="models,nrl,nrl_std,nrl_water_v"
     server="http://gcoos-mdv.gcoos.org:8080/ncWMS/wms"
     format="image/png"
+    ncWMS="true"
     style="vector"
     EN="NRL STD Sea Water Velocity"
     name="NRL_STD/sea_water_velocity" />
 
   <layer Menu="models,nrl,nrl_std,nrl_surf_el_detlcl"
     format="image/png"
+    ncWMS="true"
     server="http://gcoos-mdv.gcoos.org:8080/ncWMS/wms"
     EN="NRL STD Surface Elevation"
     name="NRL_STD/surf_el_detlcl" />
@@ -75,6 +81,7 @@
   <MainLayers>
   <layer Menu="models,ncom,ncom_water_v"
     format="image/png"
+    ncWMS="true"
     server="http://ecowatch.ncddc.noaa.gov/thredds/wms/ncom_amseas_agg/AmSeas_Apr_05_2013_to_Current_best.ncd"
     EN="NCOM Velocity"
     style="vector"
@@ -86,6 +93,7 @@
   <MainLayers>
   <layer Menu="models,hycom,hycom_water_v"
     format="image/png"
+    ncWMS="true"
     server="http://ecowatch.ncddc.noaa.gov/thredds/wms/hycom/hycom_sfc_agg/HYCOM_Surface_Aggregation_best.ncd"
     EN="Global HYCOM Velocity"
     style="vector"
