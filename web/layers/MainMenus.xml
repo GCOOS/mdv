@@ -21,6 +21,8 @@
   <Menu ID="gcoos4" EN="gcoos4 THREDDS" />
   <Menu ID="moor" EN="Moorings" ES="Moorings"/>
   <Menu ID="nexrad" EN="NEXRAD"/>
+  <Menu ID="legend" EN="Legend"/>
+  <Menu ID="data" EN="Data"/>
   <Menu ID="gulfoceanenergy" EN="Gulf Ocean Energy"/>
   <Menu ID="lease_blocks" EN="Lease Blocks"/>
   <Menu ID="pipelines" EN="Pipelines"/>
