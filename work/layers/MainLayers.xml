@@ -104,12 +104,11 @@
 
   <!-- Observations Begin -->
   <MainLayers>
-  <layer Menu="observations,nexrad,data" EN="NEXRAD" name="1"
+  <layer Menu="observations,nexrad" EN="NEXRAD" name="1"
     server="http://nowcoast.noaa.gov/arcgis/services/nowcoast/radar_meteo_imagery_nexrad_time/MapServer/WmsServer"
     BBOX="-180,-90,180,90"
     style="default" />
   </MainLayers>
-
   <MainLayers>
     <layer Menu="observations,cyclones,tracklinesO" EN="NOAA Tropical Cyclone Observed Tracks" name="3"
       server="http://nowcoast.noaa.gov/arcgis/services/nowcoast/wwa_meteocean_tropicalcyclones_trackintensityfcsts_time/MapServer/WmsServer"
