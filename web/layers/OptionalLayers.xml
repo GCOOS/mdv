@@ -58,19 +58,19 @@
   <!-- Gulf Ocean Energy Begin -->
   <OptionalLayers>
     <layer Menu="gulfoceanenergy,lease_blocks" EN="Lease Blocks" name="0"
-    server="http://gcoos3.tamu.edu/arcgis/services/OceanEnergy/Platforms_Pipelines/MapServer/WMSServer"
+    server="http://gcoos3.tamu.edu/arcgis/services/OceanEnergy/Platforms_Pipelines_ActiveLease/MapServer/WMSServer"
     BBOX="-180,-90,180,90"
     style="default" />
   </OptionalLayers>
   <OptionalLayers>
     <layer Menu="gulfoceanenergy,pipelines" EN="Pipelines as of 2016-06-06" name="1"
-    server="http://gcoos3.tamu.edu/arcgis/services/OceanEnergy/Platforms_Pipelines/MapServer/WMSServer"
+    server="http://gcoos3.tamu.edu/arcgis/services/OceanEnergy/Platforms_Pipelines_ActiveLease/MapServer/WMSServer"
     BBOX="-180,-90,180,90"
     style="default" />
   </OptionalLayers>
   <OptionalLayers>
     <layer Menu="gulfoceanenergy,platforms" EN="Platforms as of 2016-06-06" name="2"
-    server="http://gcoos3.tamu.edu/arcgis/services/OceanEnergy/Platforms_Pipelines/MapServer/WMSServer"
+    server="http://gcoos3.tamu.edu/arcgis/services/OceanEnergy/Platforms_Pipelines_ActiveLease/MapServer/WMSServer"
     BBOX="-180,-90,180,90"
     style="default" />
   </OptionalLayers>
