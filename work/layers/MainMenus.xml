@@ -17,6 +17,8 @@
   <Menu ID="nrl_surf_el_detlcl" EN="Surface Elevation" />
   <Menu ID="ncom" EN="NCOM" />
   <Menu ID="hycom" EN="Global HYCOM" />
+  <Menu ID="roms" EN="TABS/ROMS" />
+  <Menu ID="winds" EN="ETA Winds" />
   <Menu ID="hfdac" EN="HF DAC" />
   <Menu ID="gcoos4" EN="gcoos4 THREDDS" />
   <Menu ID="moor" EN="Moorings" ES="Moorings"/>
@@ -27,6 +29,7 @@
   <Menu ID="lease_blocks" EN="Lease Blocks"/>
   <Menu ID="pipelines" EN="Pipelines"/>
   <Menu ID="platforms" EN="Platforms"/>
+  <Menu ID="protraction" EN="Protraction Grid"/>
   <Menu ID="modu" EN="MODU"/>
   <Menu ID="sst" EN="SST"/>
   <Menu ID="cyclones" EN="Cyclones"/>

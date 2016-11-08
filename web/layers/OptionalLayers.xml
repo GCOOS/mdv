@@ -74,6 +74,13 @@
     BBOX="-180,-90,180,90"
     style="default" />
   </OptionalLayers>
+<OptionalLayers>
+    <layer Menu="gulfoceanenergy,protraction" EN="Protraction Grid as of 2015-07-01" name="0"
+    server="http://gcoos3.tamu.edu/arcgis/services/OceanEnergy/Protraction/MapServer/WMSServer"
+    BBOX="-180,-90,180,90"
+    style="default" />
+  </OptionalLayers>
+
   <!-- Gulf Ocean Energy Ends -->
   <!-- Optional Layers Ends -->
 </MenuConf>
